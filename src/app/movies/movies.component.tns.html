@@ -1,0 +1,8 @@
+<ListView [items]="movies$ | async" class="list-group">
+    <ng-template let-item="item">
+        <StackLayout>
+            <Label [text]="item.title" class="list-group-item"></Label>
+            <Image [src]="item.poster" class="list-group-item"></Image>
+        </StackLayout>
+    </ng-template>
+</ListView>

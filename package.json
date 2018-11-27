@@ -1,7 +1,10 @@
 {
   "name": "star-wars",
   "nativescript": {
-    "id": "org.nativescript.starwars"
+    "id": "org.nativescript.starwars",
+    "tns-android": {
+      "version": "5.0.0"
+    }
   },
   "version": "0.0.0",
   "scripts": {
