@@ -1,7 +1,11 @@
 <div style="text-align: center">
   <h1>Star Wars Movies 🚀</h1>
 
-  <div *ngFor="let movie of movies$ | async">
+  <div
+    *ngFor="let movie of movies$ | async, let i = index"
+    [routerLink]="['/movie-details', i]"
+    class="movie-panel"
+  >
     <h2>{{ movie.title }}</h2>
     <img [src]="movie.poster" width="400" height="400" alt="Poster">
   </div>
