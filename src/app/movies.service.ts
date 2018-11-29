@@ -41,7 +41,7 @@ export class MoviesService {
   private movies = [
     {
       'title': 'Star Wars: Episode I - The Phantom Menace',
-      'poster': '/assets/octocat.png',
+      'poster': '~/assets/octocat.png',
     },
 
     {
