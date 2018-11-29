@@ -1,8 +1,10 @@
 <ListView [items]="movies$ | async" class="list-group">
-    <ng-template let-item="item">
-        <StackLayout>
-            <Label [text]="item.title" class="list-group-item"></Label>
-            <Image [src]="item.poster" class="list-group-item"></Image>
-        </StackLayout>
+    <ng-template let-item="item" let-id="index">
+        <Label
+            [nsRouterLink]="['/movie-details', id]"
+            [text]="item.title"
+            class="list-group-item"
+        ></Label>
     </ng-template>
 </ListView>
+

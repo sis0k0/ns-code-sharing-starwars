@@ -1,3 +1,11 @@
-<FlexboxLayout *ngIf="movie$ | async as movie">
-    <Label [text]="movie.title" textWrap="true"></Label>
-</FlexboxLayout>
+<StackLayout *ngIf="movie$ | async as movie">
+    <ActionBar [title]="movie.title.split('-')[0]" icon="" class="action-bar">
+    </ActionBar>
+
+    <Label
+        [text]="movie.title.split('-')[1]"
+        class="h1 text-center"
+        textWrap="true"
+    ></Label> 
+    <Image [src]="movie.poster"></Image>
+</StackLayout>
